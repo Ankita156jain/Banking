@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run lite-server",
-    "lite-server":"lite-server"
+    "ts":"D:\\demo\\Banking\\node_modules\\.bin\\tsc --init",
+    "tsc":" D:\\demo\\Banking\\node_modules\\.bin\\tsc",
+    "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "zone.js": "^0.8.17"
   },
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "typescript": "^2.5.2"
   }
 }
