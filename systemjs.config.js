@@ -13,6 +13,7 @@
             "@angular/platform-browser-dynamic": "node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js",
             "@angular/router": "node_modules/@angular/router/bundles/router.umd.js",
             "rxjs": "node_modules/rxjs",
+            "@ng-bootstrap/ng-bootstrap" : "node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js"
         },
         packages: {
             app: {

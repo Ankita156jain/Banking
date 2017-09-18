@@ -1,0 +1,12 @@
+{
+    "banks":[
+        {
+            "name":"HDFC",
+            "value":1
+        },
+        {
+            "name":"SBI",
+            "value":2
+        }
+    ]
+}

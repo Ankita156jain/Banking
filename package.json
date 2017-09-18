@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run lite-server",
-    "ts":"D:\\demo\\Banking\\node_modules\\.bin\\tsc --init",
-    "tsc":" D:\\demo\\Banking\\node_modules\\.bin\\tsc",
-    "lite-server": "lite-server"
+    "start": "concurrently \"npm run tsc\" \"npm run watch\" \"npm run lite-server\"",
+    "ts": "D:\\demo\\Banking\\node_modules\\.bin\\tsc --init",
+    "tsc": " D:\\demo\\Banking\\node_modules\\.bin\\tsc",
+    "lite-server": "lite-server",
+    "watch": "D:\\demo\\Banking\\node_modules\\.bin\\tsc -w"
   },
   "repository": {
     "type": "git",
@@ -29,13 +30,19 @@
     "@angular/platform-browser": "^4.3.6",
     "@angular/platform-browser-dynamic": "^4.3.6",
     "@angular/router": "^4.3.6",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.4",
+    "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.7.1",
     "core-js": "^2.5.1",
+    "jquery": "^3.2.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3",
     "systemjs": "^0.20.18",
     "zone.js": "^0.8.17"
   },
   "devDependencies": {
+    "@types/bootstrap.datepicker": "0.0.29",
+    "concurrently": "^3.5.0",
     "lite-server": "^2.3.0",
     "typescript": "^2.5.2"
   }

@@ -1,0 +1,50 @@
+<form [formGroup]="regForm" class="form-horizontal" (ngSubmit)="submit(regForm.value)">
+    <div class="form-group" [ngClass]="{'has-error':InvalidMessage()}">
+        <label for="fname" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-5">
+            <input type="text" formControlName="firstName" class="form-control" id="fname" placeholder="">
+            <em class="help-block" *ngIf="InvalidMessage()">Required.</em>
+        </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':InvalidMessageLname()}">
+        <label for="lname" class="col-sm-2 control-label"> Last Name </label>
+        <div class="col-sm-5">
+            <input type="text" formControlName="lastName" class="form-control" id="lname" placeholder="">
+            <em class="help-block" *ngIf="InvalidMessageLname()">Required. </em>
+        </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':InvalidContact()}">
+        <label for="contact" class="col-sm-2 control-label">Contact No.</label>
+        <div class="col-sm-5">
+            <input type="text" formControlName="contactNo" class="form-control" id="contact" placeholder="">
+            <em class="help-block" *ngIf="InvalidContact()">Required.</em>
+        </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':InvalidEmail()}">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-5">
+            <input type="email" class="form-control" formControlName="email" id="email" placeholder="">
+            <em class="help-block" *ngIf="InvalidEmail()">Required. </em>
+        </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':InvalidPassword()}">
+        <label for="password" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-5">
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="">
+            <em class="help-block" *ngIf="InvalidPassword()">Required. </em>
+        </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':PasswordMatch()}">
+        <label for="repassword" class="col-sm-2 control-label">Confirm Password</label>
+        <div class="col-sm-5">
+            <input type="password" formControlName="repassword" class="form-control" id="repassword" placeholder="">
+            <em class="help-block" *ngIf="PasswordMatch()">MisMatch.</em>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+    {{msg}}
+</form>
